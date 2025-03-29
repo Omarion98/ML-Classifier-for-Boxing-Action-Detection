@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import time
-
+import os
 # Try to import XGBoost, if available
 try:
     from xgboost import XGBClassifier
@@ -101,7 +101,9 @@ def main():
     # Load data
     print("Loading data...")
     # Training on balanced data
-    with open('D:/Master/Praktikum_KI/Boxing_Dataset/processed/boxing_balanced.pkl', 'rb') as f:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, 'boxing_balanced.pkl')
+    with open(file_path, 'rb') as f:
         balanced_data = pickle.load(f)
 
     # Get training data from balanced dataset
