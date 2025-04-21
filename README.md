@@ -33,5 +33,6 @@ The script applies supervised learning techniques to classify boxing-related act
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/your-repo-name.git](https://github.com/Omarion98/ML-Classifier-for-Boxing-Action-Detection.git
-   pip install -r requirements.txt
+   python3 -m venv env
+   pip install -U pip && pip install -r requirements.txt
    python boxing_ml_classifier.py
